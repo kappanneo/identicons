@@ -1,19 +1,7 @@
 .REMOVE_ON_ERROR:
 .SECONDARY:
 
-all: disorganizzazione \
-		batto1300 \
-		drfebusinc \
-		filmar \
-		frabulous \
-		gio93k \
-		grushnack \
-		harisont \
-		kappanneo \
-		oneclaudio \
-		shizen39
-	@echo "all done!"
-
+.PHONY: clean
 clean:
 	rm -f *.png*
 
