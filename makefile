@@ -1,20 +1,24 @@
 .REMOVE_ON_ERROR:
 .SECONDARY:
 
-.PHONY: clean
+.PHONY: clean install
 clean:
-	rm -f *.png*
+	@ rm -f *.png*
+	@ echo "all clean"
+
+install:
+	@ mv -f *.png samples/follow\* 2>/dev/null || echo 
 
 % :
-	@echo "retrieving $*'s identicon"
-	@make -s $*.png
-	@echo "converting $*'s identicon"
-	@make -s $*_no_back.png
-	@make -s $*_light.png
-	@make -s $*_dark.png
-	@make -s $*_white.png
-	@make -s $*_black.png
-	@echo "$* done."
+	@ echo "retrieving $*'s identicon"
+	@ make -s $*.png
+	@ echo "converting $*'s identicon"
+	@ make -s $*_no_back.png
+	@ make -s $*_light.png
+	@ make -s $*_dark.png
+	@ make -s $*_white.png
+	@ make -s $*_black.png
+	@ echo "$* done."
 
 %.png :
 	wget -q https://github.com/identicons/$*.png

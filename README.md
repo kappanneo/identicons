@@ -12,6 +12,6 @@ retrieves original github identicons and adapts them to fit "in-a-circle" layout
 $ make <github username>
 ```
 
-#### to user [`clean`](https://github.com/clean):
+#### to users [`clean`](https://github.com/clean) and [`install`](https://github.com/install):
 
 just add `.png` to the username and everything will work, but you should still feel bad
